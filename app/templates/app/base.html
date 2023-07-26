@@ -14,9 +14,6 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <title>YouTube分析</title>
@@ -24,11 +21,11 @@
 
   <body>
     {% comment %} サイドバー {% endcomment %}
-    <div class="wrapper">
-      <ul class="navbar-bav bg-gradient-primary sidebar sidebar-dark">
+    <div id="wrapper">
+      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark">
         <a
-          href="/"
           class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="/"
         >
           <div class="sidebar-brand-icon">
             <i class="fab fa-youtube"></i>
@@ -37,7 +34,7 @@
         </a>
         <hr class="sidebar-divider my-0" />
         <li class="nav-item">
-          <a href="/" class="nav-link">
+          <a class="nav-link" href="/">
             <i class="fas fa-search"></i>
             <span>キーワード検索</span>
           </a>
@@ -51,7 +48,6 @@
             {% block content %} {% endblock %}
           </div>
         </div>
-
         {% comment %} フッター {% endcomment %}
         <footer class="sticky-footer bg-white mt-5">
           <div class="container my-auto">
@@ -62,8 +58,7 @@
         </footer>
       </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    {% block extra_js %}{% endblock %}
+    {% block extra_js %} {% endblock %}
   </body>
 </html>
