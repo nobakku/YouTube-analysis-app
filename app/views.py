@@ -52,7 +52,7 @@ def search_video(keyword, items_count, order, search_start, search_end):
 
 
 
-# チャンネルデータ取得
+# チャンネルデータ取得(プロフィール画像取得)
 def get_channel(videoid_list):
     channel_list = []
     for videoid, channelid in videoid_list.items():
